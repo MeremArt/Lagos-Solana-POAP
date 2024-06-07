@@ -3,7 +3,7 @@ const sdk = require("api")("@underdog/v2.0#5vgec2olujb1d8j");
 sdk.server("https://devnet.underdogprotocol.com");
 sdk.auth("29022c05792885.31b9ac2f964646d29d047260f4866c3c");
 
-const mintNFT = async (req, res) => {
+const testNFT = async (req, res) => {
   try {
     const pubkeys = ["HgbrurVvvFNjyGZr21b6v7jRD3r1LR8ZTsTB3b5kv7MW"];
 
@@ -14,17 +14,17 @@ const mintNFT = async (req, res) => {
       const { data } = await sdk.postV2ProjectsProjectidNfts(
         {
           receiverAddress: pubkey,
-          name: "SuperteamNG Lagos Bootcamp",
+          name: "Solana dev test",
           externalUrl: "https://x.com/superteamng?s=21",
           symbol: "SLB",
-          description: "Thank you for attending the Lagos May Solana Bootcamp!",
+          description: "Testing cNFT",
           attributes: {
             Location: "Virtual",
-            Date: "May 21 2024",
-            "Proof of ": "Viewership",
+            " Date": "May 21 2024",
+            "Proof of ": "Viewing",
           },
           receiver: {
-            namespace: "Superteam",
+            namespace: "Superteam Devs",
             identifier: "https://x.com/superteamng?s=21",
             address: pubkey,
           },
@@ -40,5 +40,4 @@ const mintNFT = async (req, res) => {
     console.error(err);
   }
 };
-
-mintNFT();
+testNFT();
