@@ -1,7 +1,7 @@
 const sdk = require("api")("@underdog/v2.0#5vgec2olujb1d8j");
 
 sdk.server("https://devnet.underdogprotocol.com");
-sdk.auth("29022c05792885.31b9ac2f964646d29d047260f4866c3c");
+sdk.auth("29022c05792885.`api`");
 
 const testNFT = async (req, res) => {
   try {
